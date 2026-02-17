@@ -1,0 +1,241 @@
+aviator@x570:~/kubernetes/Resources/Day04/todoapp-docker$ docker inspect hardcore_varahamihira 
+[
+    {
+        "Id": "88f15f23a8154efea1d2a43d05024ad36a8af5979e57f4b941c3e6a2902c98f1",
+        "Created": "2026-02-17T14:59:28.50553775Z",
+        "Path": "/docker-entrypoint.sh",
+        "Args": [
+            "nginx",
+            "-g",
+            "daemon off;"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 7736,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-02-17T14:59:28.556931738Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:58d3128ab3d5068af8369a0b7517ff7ce9be7d2ff38053a0c633e14991acb643",
+        "ResolvConfPath": "/var/lib/docker/containers/88f15f23a8154efea1d2a43d05024ad36a8af5979e57f4b941c3e6a2902c98f1/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/88f15f23a8154efea1d2a43d05024ad36a8af5979e57f4b941c3e6a2902c98f1/hostname",
+        "HostsPath": "/var/lib/docker/containers/88f15f23a8154efea1d2a43d05024ad36a8af5979e57f4b941c3e6a2902c98f1/hosts",
+        "LogPath": "/var/lib/docker/containers/88f15f23a8154efea1d2a43d05024ad36a8af5979e57f4b941c3e6a2902c98f1/88f15f23a8154efea1d2a43d05024ad36a8af5979e57f4b941c3e6a2902c98f1-json.log",
+        "Name": "/hardcore_varahamihira",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {
+                "3000/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "3000"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                30,
+                118
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware",
+                "/sys/devices/virtual/powercap"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "ID": "88f15f23a8154efea1d2a43d05024ad36a8af5979e57f4b941c3e6a2902c98f1",
+                "LowerDir": "/var/lib/docker/overlay2/8fadc487c44a35af06be83e7f510c7d7cb4bcb6bae5104b9fbab76eed268ee94-init/diff:/var/lib/docker/overlay2/6ae369382b6424df3e9020069e6f10b491f2f5f9743fd04ef84464a3f6b0bcda/diff:/var/lib/docker/overlay2/526158642dbfc1d27e91898f6ddac0d8ba516b8b580e37a3c69552feb82332c5/diff:/var/lib/docker/overlay2/568c1b7fec236d4b9c4e1226e4c2f477ec5be065fbd606f6bed04ea38267ef18/diff:/var/lib/docker/overlay2/cf3ebfe642a77797e29b5a88fc5636e17c8114246b0dd0ff81ad297c33eebe90/diff:/var/lib/docker/overlay2/32d8a3312bf30faf4aed324b7958ee7268a42db198833d29156ea0df68f5c797/diff:/var/lib/docker/overlay2/ff67d43d94e5c1d23319d422abc0aa9ccd3b5120813f797323dd555e4507cfbc/diff:/var/lib/docker/overlay2/0fcd0a0e193106701d7652f229cc383428960270d4f76525526438d662d6ee01/diff:/var/lib/docker/overlay2/2e77ef6880dd9e2429ec11ae8a565c1717a3e51b85e4bf228ac2969ddcc380fa/diff",
+                "MergedDir": "/var/lib/docker/overlay2/8fadc487c44a35af06be83e7f510c7d7cb4bcb6bae5104b9fbab76eed268ee94/merged",
+                "UpperDir": "/var/lib/docker/overlay2/8fadc487c44a35af06be83e7f510c7d7cb4bcb6bae5104b9fbab76eed268ee94/diff",
+                "WorkDir": "/var/lib/docker/overlay2/8fadc487c44a35af06be83e7f510c7d7cb4bcb6bae5104b9fbab76eed268ee94/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [],
+        "Config": {
+            "Hostname": "88f15f23a815",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "3000/tcp": {},
+                "80/tcp": {}
+            },
+            "Tty": true,
+            "OpenStdin": true,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NGINX_VERSION=1.29.5",
+                "NJS_VERSION=0.9.5",
+                "NJS_RELEASE=1~trixie",
+                "ACME_VERSION=0.3.1",
+                "PKG_RELEASE=1~trixie",
+                "DYNPKG_RELEASE=1~trixie"
+            ],
+            "Cmd": [
+                "nginx",
+                "-g",
+                "daemon off;"
+            ],
+            "Image": "multistage-todoapp",
+            "Volumes": null,
+            "WorkingDir": "",
+            "Entrypoint": [
+                "/docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "maintainer": "NGINX Docker Maintainers <docker-maint@nginx.com>"
+            },
+            "StopSignal": "SIGQUIT"
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "4e16b1883b5a5b27e6e549c4fe6e0b119e2463655bb9fc3c930ee24cd74b7ff2",
+            "SandboxKey": "/var/run/docker/netns/4e16b1883b5a",
+            "Ports": {
+                "3000/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "3000"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "3000"
+                    }
+                ],
+                "80/tcp": null
+            },
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "74e948872a875bce327a257c34510d34eea705f2194d5c88b7d638f5ab89db43",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.2",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "2e:16:cd:d3:50:42",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "MacAddress": "2e:16:cd:d3:50:42",
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "2bb87540010503e7924bd9e730e297ee8f2baa46ae1bc1bf753b9e64ebd155ab",
+                    "EndpointID": "74e948872a875bce327a257c34510d34eea705f2194d5c88b7d638f5ab89db43",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        }
+    }
+]
+aviator@x570:~/kubernetes/Resources/Day04/todoapp-docker$ 
