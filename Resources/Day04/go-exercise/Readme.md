@@ -1,0 +1,2 @@
+The Challenge: The "Hello World" Binary
+Imagine you are building a high-performance microservice. You need the Go compiler to turn code into a binary, but once the binary is created, you don't need the compiler anymore.

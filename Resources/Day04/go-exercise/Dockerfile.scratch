@@ -1,0 +1,22 @@
+# STAGE 1: The Builder (The "Kitchen")
+FROM golang:1.21-alpine AS builder
+
+WORKDIR /app
+
+COPY main.go .
+
+# We use special flags here:
+# CGO_ENABLED=0 means "Don't depend on any system C libraries"
+# -ldflags="-s -w" strips out debug info to make the file even smaller
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o hello main.go
+
+# ---------------------------------------------------------
+
+# STAGE 2: The Final Container (The "Vacuum")
+FROM scratch
+
+# Copy only the binary from the builder
+COPY --from=builder /app/hello /hello
+
+# Run the binary
+ENTRYPOINT ["/hello"]
