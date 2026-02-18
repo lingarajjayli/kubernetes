@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: ReplicationController
+metadata:
+  name: nginx-rs
+  labels:
+    env: demo
+spec:
+  template:
+    metadata:
+      labels:
+        env: demo
+        name: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+  replicas: 3
