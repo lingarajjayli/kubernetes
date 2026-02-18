@@ -1,0 +1,66 @@
+Act as a Senior Kubernetes Instructor.
+I have created a flat repository structure: `k8s-zero-to-hero/Day01` through `Day14`.
+I need you to generate the core content for the first 3 days.
+
+**My Goal:** Learn Kubernetes practically by deploying GAMES (Doom, 2048, Minecraft).
+
+**Task 1: Generate the Root README.md**
+- Title: "K8s Zero to Hero: The Gamified Path 🎮"
+- Explanation: A 14-day path to master K8s by breaking things.
+- Tools Required: Minikube, Docker, k9s.
+
+**Task 2: Generate Content for Day 01 (The Setup)**
+- File: `Day01/README.md`
+- Content:
+  - Command to start minikube: `minikube start --driver=docker`
+  - Command to install k9s.
+  - Verification: `kubectl get nodes`
+
+**Task 3: Generate Content for Day 02 (2048 Game)**
+- File: `Day02/2048-pod.yaml`
+- YAML Content:
+    apiVersion: v1
+    kind: Pod
+    metadata:
+      name: game-2048
+      labels:
+        app: game-2048
+    spec:
+      containers:
+      - name: game-2048
+        image: alexwhen/docker-2048
+        ports:
+        - containerPort: 80
+- File: `Day02/README.md`
+- Instructions:
+  - Apply: `kubectl apply -f 2048-pod.yaml`
+  - View: `kubectl port-forward pod/game-2048 8080:80`
+  - Play: Open `localhost:8080` in browser.
+
+**Task 4: Generate Content for Day 03 (Doom Deployment)**
+- File: `Day03/doom.yaml`
+- YAML Content:
+    apiVersion: apps/v1
+    kind: Deployment
+    metadata:
+      name: doom
+    spec:
+      replicas: 3
+      selector:
+        matchLabels:
+          app: doom-game
+      template:
+        metadata:
+          labels:
+            app: doom-game
+        spec:
+          containers:
+          - name: doom
+            image: ocr.jfrog.io/docker-doom:latest
+            ports:
+            - containerPort: 8080
+- Challenge: "Kill a pod in k9s (Ctrl+D) and watch it resurrect."
+
+**Style Guidelines:**
+- Use Markdown.
+- Keep it fun and concise.

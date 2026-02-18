@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: doom
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: doom-game
+  template:
+    metadata:
+      labels:
+        app: doom-game
+    spec:
+      containers:
+      - name: doom
+        image: ocr.jfrog.io/docker-doom:latest
+        ports:
+        - containerPort: 8080
